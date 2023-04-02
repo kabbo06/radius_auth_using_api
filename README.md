@@ -157,3 +157,14 @@ From this output we can verify that our radius server is working properly.
 
 ### Security Enhancement:
 We have configured out API communication with HTTP. We can easily configure TLS encryption or HTTPS during radius REST authentication configuration. Also, we can use secret token base authentication with API communication. We can secure NAS to radius communication by using various protocol like EAP-TLS, PEAP-MSCHAPv2, EAP-TTLS/PAP etc.
+
+# References
+
+[Wiki - FreeRADIUS](https://wiki.freeradius.org/Home)
+
+[ FreeRADIUS rlm_rest Module](https://networkradius.com/doc/current/raddb/mods-available/rest.html)
+
+[FreeRADIUS security](https://blog.tom.be/server-management/authenticating-your-wifi-against-a-rest-api-through-radius/)
+
+[Another REST-API-FreeRADIUS Project](https://github.com/fgsants/REST-API-FreeRADIUS)
+
