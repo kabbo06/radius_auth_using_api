@@ -70,7 +70,7 @@ To install FreeRADIUS, run the following command:
 ```
 ### Configure FreeRADIUS:
 
-Once FreeRADIUS is installed, we need to configure it. The main configuration file for FreeRADIUS is /etc/freeradius/clients.conf. We need to configure the client section to allow requests from NAS (wireless controller) server's IP address. For this example, you will add the following lines to the file:
+Once FreeRADIUS is installed, we need to configure it. The main configuration file for FreeRADIUS is /etc/freeradius/clients.conf. We need to configure the client section to allow requests from NAS (wireless controller) server's IP address. For this example, we will add the following lines to the files:
 
 ### /etc/freeradius/3.0/clients.conf
 ```bash
@@ -78,4 +78,11 @@ Once FreeRADIUS is installed, we need to configure it. The main configuration fi
   ipaddr = 192.168.56.101
   secret = mysecret
 }
+```
+
+To enable REST based authentication method:
+
+### /etc/freeradius/3.0/users
+```bash
+DEFAULT Auth-Type := rest
 ```
