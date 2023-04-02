@@ -70,4 +70,12 @@ To install FreeRADIUS, run the following command:
 ```
 ### Configure FreeRADIUS:
 
-We need to edit several files to configure:
+Once FreeRADIUS is installed, we need to configure it. The main configuration file for FreeRADIUS is /etc/freeradius/clients.conf. We need to configure the client section to allow requests from NAS (wireless controller) server's IP address. For this example, you will add the following lines to the file:
+
+### /etc/freeradius/3.0/clients.conf
+```bash
+  client erp_server {
+  ipaddr = 192.168.56.101
+  secret = mysecret
+}
+```
