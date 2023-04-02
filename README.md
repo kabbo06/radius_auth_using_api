@@ -154,3 +154,6 @@ radtest user2 pass2 localhost 0 testing123
 ![](images/api-3.png)
 
 From this output we can verify that our radius server is working properly.
+
+### Security Enhancement:
+We have configured out API communication with HTTP. We can easily configure TLS encryption or HTTPS during radius REST authentication configuration. Also, we can use secret token base authentication with API communication. We can secure NAS to radius communication by using various protocol like EAP-TLS, PEAP-MSCHAPv2, EAP-TTLS/PAP etc.
