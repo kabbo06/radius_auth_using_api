@@ -45,3 +45,4 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
 ```
+It is a simple script that will listen on 5000 port while running. It accepts API request on URI **/authenticate** . When Radius will receive user authentication request from wireless controller, it will send that user information as JSON data onto API end point. Then API server will verify this information. If user information is correct then it will response HTTP 200 means allow. Otherwise it will deny by sending HTTP 400 response. Based on reply from API server, radius will allow or deny the user request.
