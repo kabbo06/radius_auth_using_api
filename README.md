@@ -132,7 +132,7 @@ Our FreeRADIUS server configuration is now compleated. Now start and enable the 
 systemctl --now enable freeradius.service
 ```
 ### Testing:
-***radtest*** is a tool that comes with freeradius-utils package. We can use this tools to check radius server functionality. In our python script, we have hardcoded one user and password for demo purpose. Test radius authentication with below command:
+***radtest*** is a tool that comes with freeradius-utils package. We can use this tools to check radius server functionality from localhost. In our python script, we have hardcoded one user and password for demo purpose. Test radius authentication with below command:
 
 ```bash
 radtest user1 pass1 localhost 0 testing123
