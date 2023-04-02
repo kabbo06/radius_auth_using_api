@@ -120,3 +120,10 @@ authenticate {
 
         }
 ```
+
+We can enable user auth log status: 
+
+### /etc/freeradius/3.0/radiusd.conf
+```bash
+auth = yes
+```
