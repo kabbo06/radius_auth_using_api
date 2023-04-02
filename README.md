@@ -137,3 +137,9 @@ systemctl --now enable freeradius.service
 ```bash
 radtest user1 pass1 localhost 0 testing123
 ```
+Now check the output from radius and API server:
+![](images/cmd-1.png)
+
+![](images/api-2.png)
+
+We can see user authentication status is ***Received Access-Accept***. it means user is successfully authenticated. Also, from API server, it received the API request and response with 200 OK status because user credentials is valid.
