@@ -86,3 +86,37 @@ To enable REST based authentication method:
 ```bash
 DEFAULT Auth-Type := rest
 ```
+To make REST based authentication default:
+
+### /etc/freeradius/3.0/sites-enabled/default
+```bash
+authenticate {
+     Auth-Type rest {
+        rest
+     }
+```
+
+Now configure REST auth mechanism:
+
+```bash
+ln -s /etc/freeradius/3.0/mods-available/rest /etc/freeradius/3.0/mods-enabled/
+```
+### /etc/freeradius/3.0/mods-enabled/rest
+```bash
+connect_uri = "http://192.168.56.106:5000"
+
+authenticate {
+                    uri = "${..connect_uri}/authenticate"
+                    method = "post"
+                    request_headers {
+                      Content-Type = "application/json"
+                      Authorization = "Bearer my-hardcoded-token"
+                    }
+                    body = json
+                    data = '{ "username": "%{User-Name}", "password": "%{User-Password}" }'
+                    force_to = json
+                    #response_expected = "ok"
+                    #response_if_not_found = "fail"
+
+        }
+```
