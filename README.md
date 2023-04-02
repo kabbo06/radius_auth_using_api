@@ -10,3 +10,6 @@ Network Access Server (NAS) is a device that provides an access point to the net
 The RADIUS server **(192.168.56.104)** checks user information against the entry for the remote user in various methods. It can use local or remote mysql database, LDAP, Active Directory etc. But in this scenario radius server will not authenticate remote user by himself but relay this information to a server **(192.168.56.106)** via REST API call. Then the API server will verify the user credential and give response to the radius server. On the basis of API response from the server radius will allow or deny the user accordingly.
 
 ![](images/topo-1.png)
+
+# Environment Setup:
+We will use Ubuntu 22.04.2 LTS for lab setup. FreeRADIUS is a modular, high performance free RADIUS application which is absolutely free. We will use it as radius server deployment. It will be deployed under an Ubuntu VM for which the IP address is **192.168.56.104** . Also, for emulating API server functionality, we will use Python and Flask module. That will be configured on another VM with IP address of **192.168.56.104** .
