@@ -120,10 +120,14 @@ authenticate {
 
         }
 ```
-
 We can enable user auth log status: 
 
 ### /etc/freeradius/3.0/radiusd.conf
 ```bash
 auth = yes
+```
+Our FreeRADIUS server configuration is now compleated. Now start and enable the service:
+
+```bash
+systemctl --now enable freeradius.service
 ```
