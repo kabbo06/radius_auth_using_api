@@ -55,3 +55,5 @@ execute erp.py
   python3 erp.py
 ```
 ![](images/api-1.png)
+
+Now, we will keep this script running and configure radius server.
