@@ -61,10 +61,13 @@ Now, we will keep this script running and configure radius server.
 # API Server Configurstion:
 In radius server VM, we will install and configure FreeRADIUS software. For this we need to install some packages. 
 
-### Install FreeRADIUS
+### Install FreeRADIUS:
 
 To install FreeRADIUS, run the following command:
 
 ```bash
   apt install freeradius freeradius-rest freeradius-utils
 ```
+### Configure FreeRADIUS:
+
+We need to edit several files to configure:
