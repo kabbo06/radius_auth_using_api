@@ -143,3 +143,14 @@ Now check the output from radius and API server:
 ![](images/api-2.png)
 
 We can see user authentication status is ***Received Access-Accept***. it means user is successfully authenticated. Also, from API server, it received the API request and response with 200 OK status because user credentials is valid.
+
+if we try to authenticate with incorrect user information:
+
+```bash
+radtest user2 pass2 localhost 0 testing123
+```
+![](images/cmd-2.png)
+
+![](images/api-3.png)
+
+From this output we can verify that our radius server is working properly.
