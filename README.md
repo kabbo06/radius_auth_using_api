@@ -49,7 +49,7 @@ It is a simple script that will listen on 5000 port while running. It accepts AP
 
 ### Running API Script:
 
-execute erp.py
+Execute erp.py
 
 ```bash
   python3 erp.py
