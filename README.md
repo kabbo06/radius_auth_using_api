@@ -138,6 +138,7 @@ systemctl --now enable freeradius.service
 radtest user1 pass1 localhost 0 testing123
 ```
 Now check the output from radius and API server:
+
 ![](images/cmd-1.png)
 
 ![](images/api-2.png)
