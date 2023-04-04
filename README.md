@@ -58,8 +58,8 @@ execute erp.py
 
 Now, we will keep this script running and configure radius server.
 
-# API Server Configurstion:
-In radius server VM, we will install and configure FreeRADIUS software. For this we need to install some packages. 
+# Radius Server Configuration:
+In radius server VM, we will install and configure FreeRADIUS software. Also, ***rlm_rest*** module need to be installed for API capabilities. For this we need to install some packages. 
 
 ### Install FreeRADIUS:
 
