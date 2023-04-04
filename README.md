@@ -7,7 +7,7 @@ In this lab environments, we will configure a radius server which will authentic
   
 # Scenario:
 Network Access Server (NAS) is a device that provides an access point to the network for remote users connecting using SLIP, PPP, or any other remote access protocol. The NAS transmits the information provided in the connection request from the remote user to the RADIUS server. Here wireless controller act as NAS server. Then RADIUS server checks this information against the user and returns to the NAS an authentication, authorization or denial for the remote user connection. \
-The RADIUS server **(192.168.56.104)** checks user information against the entry for the remote user in various methods. It can use local or remote mysql database, LDAP, Active Directory etc. But in this scenario radius server will not authenticate remote user by himself but relay this information to a server **(192.168.56.106)** via REST API call. Then the API server will verify the user credential and give response to the radius server. On the basis of API response from the server radius will allow or deny the user accordingly.
+The RADIUS server checks user information against the entry for the remote user in various methods. It can use local or remote sql database, LDAP, Active Directory etc. But in this scenario radius server will not authenticate remote user by himself but relay this information to API server via REST API call. Then the API server will verify the user credential and give response to the radius server. On the basis of API response from the server radius will allow or deny the user accordingly.
 
 ![](images/topo-1.png)
 
